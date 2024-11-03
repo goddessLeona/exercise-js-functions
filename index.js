@@ -167,10 +167,28 @@ function fizzBuzz (nummber){
 
 // Uppgift 3 Factorial Calculator
 
-//Write a function called factorial that takes a positive integer as a parameter 
-//and returns the factorial of that number (e.g., 5! = 5 × 4 × 3 × 2 × 1).
 
-function factorial (nummber2){
+function factorial (positivenr){
 
+if(positivenr < 0){
+    return -1;
+}else if(positivenr === 0){
+    return 1;
+}else{
+    return(positivenr * factorial (positivenr -1));
+}
+}
 
+// Uppgift 4 Longest word in sentence 
+
+function findLongetsWord (sentence){
+    sentence = sentence.match(/[a-zA-Z0-9]+/gi);
+    let longestWord = "";
+
+    for(let i = 0; i < sentence.length; i++){
+        if(sentence[i].length > longestWord.length){
+            longestWord = sentence[i];
+        }
+    }
+    return longestWord 
 }
