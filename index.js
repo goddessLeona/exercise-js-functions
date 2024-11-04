@@ -192,3 +192,57 @@ function findLongetsWord (sentence){
     }
     return longestWord 
 }
+
+// Uppgift 5 Array Average
+
+function calculateAverage (arr){
+    
+    let sum = 0;
+
+    for( let i = 0; i< arr.length; i++){
+        sum +=arr[i]
+    }
+    return sum/arr.length
+}
+
+// Uppgift 6 + 9 Remove Duplicates
+
+function removeDuplicates (array){
+    let doubleNr = [];
+
+    for (let i = 0; i < array.length; i++){
+        doubleNr.push(array[i]*2);
+    }
+    console.log(array)
+    console.log(doubleNr)
+
+    const jonedArray = array.concat(doubleNr);
+    console.log(jonedArray)
+    let array3 = [...new Set(jonedArray)];
+    console.log(array3);
+}
+
+//Uppgift 7 Capitalize First Letter
+
+function capitalizeFirstLetter(str){
+
+    let firtLetter = str[0].toUpperCase();
+    str = firtLetter + str.slice(1);
+
+    console.log(str)
+}
+
+// Uppgift 8 Count Occurences
+
+function countOccurrences (str, character){
+
+    const times = str.split(character).length -1;
+
+
+    console.log(` the character: ${character} acured in the string: "${str}" ${times} times `)
+}
+
+// Uppgift 10 Random Password Generator
+
+// Write a function called generatePassword that takes a length as a parameter and returns a randomly generated password of that length, 
+//using uppercase letters, lowercase letters, and numbers.
