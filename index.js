@@ -244,5 +244,57 @@ function countOccurrences (str, character){
 
 // Uppgift 10 Random Password Generator
 
-// Write a function called generatePassword that takes a length as a parameter and returns a randomly generated password of that length, 
-//using uppercase letters, lowercase letters, and numbers.
+
+function generatePassword (lenghtofCharacters){
+    const characters1 ="ABCDEFGHIJKLMNOPQRSTUVXYZabsdefghjklmnopqrstuvxyz!£$?@&*";
+    //let characters2 ="absdefghjklmnopqrstuvxyz";
+    //let characters3 = "!£$?@&*";
+
+    let password = "";
+
+    for(let i = 0; i < lenghtofCharacters; i++){
+        let index = Math.floor(Math.random()* characters1.length -1);
+        password += characters1[index];
+    }
+    return password;
+}
+
+// uppgift 11 Character Frequency
+
+//Create a function named charFrequency that takes a string as a parameter
+//and returns an object with each character as a key and the number of times it appears in the string as the value.
+
+function charFrequency (str){
+
+}
+
+// Uppgift 12 Intersection of Arrays
+
+function arrayIntersection (array, array2){
+    const newArray = array.concat(array2);
+    console.log(newArray);
+
+    const dublicates = newArray.filter((item, index) => newArray.indexOf(item)!==index);
+    console.log(dublicates)
+
+}
+
+//Uppgift 13 string reversal
+
+function reversWord (string){
+    const words = string.split(" ");
+    words.reverse();
+    console.log(words)
+    let reverstwords = words.join(" ");
+    console.log(reverstwords)
+}
+
+// Uppgift 14 
+
+// Write a function called findMin that takes an array of numbers as a parameter 
+//and returns the smallest number in the array.
+
+function findMin(arrayNr){
+    const minNr = Math.min(...arrayNr);
+    console.log(minNr);
+}
